@@ -120,10 +120,9 @@ print_r($COMPUTER_LOCAL_MAC_ARRAY);
 				$approved_sleep = false;
 				if ( isset($_POST['password']) )
 		                {
-                			$hash = hash("sha256", $_POST['password']);
+						$hash = hash("sha256", $_POST['password']);
 			                if ($hash == $APPROVED_HASH)
-			                {
-						if ($_POST['submitbutton'] == "Wake Up!")
+			                { if ($_POST['submitbutton'] == "Wake Up!")
 						{
 							$approved_wake = true;
 						}
@@ -131,8 +130,12 @@ print_r($COMPUTER_LOCAL_MAC_ARRAY);
 						{
 							$approved_sleep = true;
 						}
-					}
-				}
+							}
+						}
+                			
+						
+					
+				
 				
 
 				$selectedComputer = $_GET['computer'];

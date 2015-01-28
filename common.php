@@ -104,7 +104,9 @@ array_push($COMPUTER_LOCAL_MAC_ARRAY,$row["macaddress"]);
 mysqli_free_result($result);
 
 mysqli_close($con);
-	session_start(); 
+	if(!isset($_SESSION)){
+    session_start();
+    }
 
     // Note that it is a good practice to NOT end your PHP files with a closing PHP tag. 
     // This prevents trailing newlines on the file from being included in your output, 
