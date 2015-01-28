@@ -13,7 +13,7 @@
 	//Choose a passphrase and find the sha256 hash of that passphrase.
 	//You can use an online calculator to generate the hash: http://www.xorbin.com/tools/sha256-hash-calculator.
 	//Unless you are using an SSL connection to your server, remember that passphrases could still be obtained via a man-in-the-middle attack.
-	$APPROVED_HASH = "36a9e7f1c95b82ffb99743e0c5c4ce95d83c9a430aac59f84ef3cbfab6145068";
+	$APPROVED_HASH = "466dbe24021fd6507723692b54f567c1977da5c6e5b1cd19483f48e51e2b1c33";
 	
 	//This is the number of times that the WOL server will try to ping the target computer to check if it has woken up. Default = 10.
 	$MAX_PINGS = 10;
