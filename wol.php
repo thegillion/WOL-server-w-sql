@@ -290,14 +290,12 @@ print_r($COMPUTER_LOCAL_MAC_ARRAY);
 			<?php
 				}
 			?>
-		<p><a href="add_users.php">Register New User</a>
-		<a href="edit_account.php">Edit Your User Account</a>
-		<a href="memberlist.php">Member List</a>
-		<a href="add_devices.php">Add New Device</a>
-		<a href="devicelist.php">Device List</a>
-		<a href="logout.php">Log Out</a></p>
-		</form>
-
+		<p><a href="add_users.php">Register New User</a></p>
+		<p><a href="edit_account.php">Edit Your User Account</a></p>
+		<p><a href="memberlist.php">See Existing Users</a></p>
+		<p><a href="add_devices.php">Add New Device</a></p>
+		<p><a href="devicelist.php">See Existing Devices</a></p>
+		<p><a href="logout.php">Log Out</a></p>
     </div> <!-- /container -->
     <script src="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/js/bootstrap.min.js"></script>
   </body>
