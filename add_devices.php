@@ -297,3 +297,4 @@
     <input type="submit" value="Submit" /> 
 </form>
 <a href="devicelist.php">View Existing Devices in List</a><br />
+<a href="wol.php">Main Page</a><br />
