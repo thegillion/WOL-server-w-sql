@@ -27,11 +27,11 @@ ob_end_flush();
     if(empty($_SESSION['user'])) 
     { 
         // If they are not, we redirect them to the login page. 
-        header("Location: login.php"); 
+        header("Location: index.php"); 
          
         // Remember that this die statement is absolutely critical.  Without it, 
         // people can view your members-only content without logging in. 
-        die("Redirecting to login.php"); 
+        die("Redirecting to index.php"); 
     } 
      
     // Everything below this point in the file is secured by the login system 
@@ -295,6 +295,7 @@ print_r($COMPUTER_LOCAL_MAC_ARRAY);
 		<p><a href="edit_account.php">Edit Your User Account</a></p>
 		<p><a href="memberlist.php">Member List</a></p>
 		<p><a href="add_devices.php">Add New Device</a></p>
+		<p><a href="devicelist.php">Device List</a></p>
 		<p><a href="logout.php">Log Out</a></p>
     </div> <!-- /container -->
     <script src="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/js/bootstrap.min.js"></script>

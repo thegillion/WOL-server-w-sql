@@ -164,6 +164,7 @@
     <link rel="apple-touch-icon-precomposed" href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/ico/favicon.png">
   </head>
+   <div class="container">
 <h1>Login</h1> 
 <form action="index.php" method="post"> 
     Username:<br /> 
@@ -173,4 +174,5 @@
     <input type="password" name="password" value="" /> 
     <br /><br /> 
     <input type="submit" value="Login" /> 
+	</div> <!-- /container -->
 </form> 
