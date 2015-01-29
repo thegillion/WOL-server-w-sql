@@ -290,13 +290,14 @@ print_r($COMPUTER_LOCAL_MAC_ARRAY);
 			<?php
 				}
 			?>
-		</form>
+		<p></p>
 		<p><a href="add_users.php">Register New User</a></p>
 		<p><a href="edit_account.php">Edit Your User Account</a></p>
 		<p><a href="memberlist.php">Member List</a></p>
 		<p><a href="add_devices.php">Add New Device</a></p>
 		<p><a href="devicelist.php">Device List</a></p>
 		<p><a href="logout.php">Log Out</a></p>
+		</form>
     </div> <!-- /container -->
     <script src="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/js/bootstrap.min.js"></script>
   </body>
