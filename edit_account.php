@@ -7,11 +7,11 @@
     if(empty($_SESSION['user'])) 
     { 
         // If they are not, we redirect them to the login page. 
-        header("Location: index.php"); 
+        header("Location: login.php"); 
          
         // Remember that this die statement is absolutely critical.  Without it, 
         // people can view your members-only content without logging in. 
-        die("Redirecting to index.php"); 
+        die("Redirecting to login.php"); 
     } 
      
     // This if statement checks to determine whether the edit form has been submitted
@@ -206,6 +206,11 @@
     <link rel="apple-touch-icon-precomposed" href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/ico/favicon.png">
   </head>
+
+  <body>
+
+    <div class="container">
+<form class="form-signin" method="post">
 <h1>Edit Account</h1> 
 <form action="edit_account.php" method="post"> 
     Username:<br /> 
@@ -219,6 +224,10 @@
     <i>(leave blank if you do not want to change your password)</i> 
     <br /><br /> 
     <input type="submit" value="Update Account" /> 
-</form>
-<br>
+
+<p></p>
 <a href="wol.php">Main Page</a><br />
+</form>
+</div>
+</body>
+</html>

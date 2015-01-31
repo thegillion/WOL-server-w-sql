@@ -107,8 +107,7 @@
     } 
      
 ?> 
-<html lang="en" >
-  <head>
+<html lang="en"><head>
     <title>Remote Wake/Sleep-On-LAN</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -164,8 +163,9 @@
     <link rel="apple-touch-icon-precomposed" href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/ico/favicon.png">
   </head>
-  <body>
-   <div class="container">
+<body>
+<div class="container">
+<form class="form-signin" method="post">
 <h1>Login</h1> 
 <form action="index.php" method="post"> 
     Username:<br /> 
@@ -175,7 +175,6 @@
     <input type="password" name="password" value="" /> 
     <br /><br /> 
     <input type="submit" value="Login" /> 
-	</div> <!-- /container -->
-</form>
-</body>
+</form> 
+</div>
 </html>

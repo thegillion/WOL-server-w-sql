@@ -224,8 +224,7 @@
     } 
      
 ?>
-<html lang="en" >
-  <head>
+<html lang="en" ><head>
     <title>Remote Wake/Sleep-On-LAN</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -234,7 +233,7 @@
 
     <!-- Le styles -->
     <link href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/css/bootstrap.css" rel="stylesheet">
-    <style type="text/css">
+<style type="text/css">
       body {
         padding-top: 40px !important;
         padding-bottom: 40px;
@@ -268,7 +267,7 @@
 
     </style>
     <link href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
-
+    	
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/js/html5shiv.js"></script>
@@ -281,7 +280,10 @@
     <link rel="apple-touch-icon-precomposed" href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/ico/favicon.png">
   </head> 
-<h1>Add New Device</h1> 
+  <body>
+     <div class="container">
+<form class="form-signin" method="post">
+  <h1>Add New Device</h1> 
 <form action="add_devices.php" method="post"> 
     Device Name:<br /> 
     <input type="text" name="devicename" value="" /> 
@@ -295,6 +297,12 @@
 	<p>Format IP Address like 192.168.1.x including periods.</p>
     <br /><br /> 
     <input type="submit" value="Submit" /> 
-</form>
-<a href="devicelist.php">View Existing Devices in List</a><br />
+
+<p></p>
+<a href="devicelist.php">See Existing Devices</a><br />
 <a href="wol.php">Main Page</a><br />
+</form>
+</div>
+</div>
+</body>
+</html>

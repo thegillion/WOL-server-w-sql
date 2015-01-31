@@ -43,6 +43,7 @@
     // Finally, we can retrieve all of the found rows into an array using fetchAll 
     $rows = $stmt->fetchAll(); 
 ?>
+<!DOCTYPE html>
 <html lang="en" >
   <head>
     <title>Remote Wake/Sleep-On-LAN</title>
@@ -99,8 +100,13 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/ico/favicon.png">
-  </head> 
-<h1>Memberlist</h1> 
+  </head>
+
+  <body>
+
+    <div class="container">
+    	<form class="form-signin" method="post"> 
+<h1>Existing Users</h1> 
 <script language="javascript" src="users.js" type="text/javascript"></script>
 <table> 
     <tr> 
@@ -120,7 +126,11 @@
 
 
 </table> 
-<br>
-<a href="add_users.php">Add New User</a><br />
+<p></p>
+<a href="add_users.php">Register New User</a><br />
 <a href="delete.php">Delete User</a><br />
 <a href="wol.php">Main Page</a><br />
+</form>
+</div>
+</body>
+</html>

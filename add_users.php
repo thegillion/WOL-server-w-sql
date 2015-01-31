@@ -243,7 +243,10 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/ico/favicon.png">
-  </head> 
+  </head>
+<body>
+    <div class="container"> 
+<form class="form-signin" method="post">
 <h1>Register</h1> 
 <form action="add_users.php" method="post"> 
     Username:<br /> 
@@ -256,7 +259,12 @@
     <input type="password" name="password" value="" /> 
     <br /><br /> 
     <input type="submit" value="Register" /> 
-</form>
 
-<a href="delete.php">Delete User</a><br />
+<p></p>
+<a href="memberlist.php">See Existing Users</a><br />
+
 <a href="wol.php">Main Page</a><br />
+</form>
+</div>
+</body>
+</html>

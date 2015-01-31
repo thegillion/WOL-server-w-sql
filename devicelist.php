@@ -53,7 +53,7 @@
 
     <!-- Le styles -->
     <link href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/css/bootstrap.css" rel="stylesheet">
-    <style type="text/css">
+<style type="text/css">
       body {
         padding-top: 40px !important;
         padding-bottom: 40px;
@@ -86,6 +86,7 @@
       }
 
     </style>
+    // <link href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/css/style.css" rel="stylesheet">
     <link href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -99,7 +100,11 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/ico/favicon.png">
-  </head> 
+  </head>
+<body>
+<div class="container">
+<div class="content-container"> 
+<form class="form-signin" method="post">
 <h1>Device List</h1> 
 <table> 
     <tr> 
@@ -121,6 +126,12 @@
 
 
 </table> 
-<br>
+<p></p>
+<a href="add_devices.php">Add Device</a><br />
 <a href="delete_devices.php">Delete Device</a><br />
 <a href="wol.php">Main Page</a><br />
+</form>
+</div>
+</div>
+</body>
+</html>
