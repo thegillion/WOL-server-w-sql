@@ -1,48 +1,4 @@
-<?php 
-
-    // First we execute our common code to connection to the database and start the session 
-    require("common.php"); 
-     
-    // At the top of the page we check to see whether the user is logged in or not 
-    if(empty($_SESSION['user'])) 
-    { 
-        // If they are not, we redirect them to the login page. 
-        header("Location: login.php"); 
-         
-        // Remember that this die statement is absolutely critical.  Without it, 
-        // people can view your members-only content without logging in. 
-        die("Redirecting to login.php"); 
-    } 
-     
-    // Everything below this point in the file is secured by the login system 
-     
-    // We can retrieve a list of members from the database using a SELECT query. 
-    // In this case we do not have a WHERE clause because we want to select all 
-    // of the rows from the database table. 
-    $query = " 
-        SELECT 
-            id, 
-            devicename, 
-            macaddress
-        FROM devices 
-    "; 
-     
-    try 
-    { 
-        // These two statements run the query against your database table. 
-        $stmt = $db->prepare($query); 
-        $stmt->execute(); 
-    } 
-    catch(PDOException $ex) 
-    { 
-        // Note: On a production website, you should not output $ex->getMessage(). 
-        // It may provide an attacker with helpful information about your code.  
-        die("Failed to run query: " . $ex->getMessage()); 
-    } 
-         
-    // Finally, we can retrieve all of the found rows into an array using fetchAll 
-    $rows = $stmt->fetchAll(); 
-?>
+<!DOCTYPE html>
 <html lang="en" >
   <head>
     <title>Remote Wake/Sleep-On-LAN</title>
@@ -53,7 +9,7 @@
 
     <!-- Le styles -->
     <link href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/css/bootstrap.css" rel="stylesheet">
-<style type="text/css">
+    <style type="text/css">
       body {
         padding-top: 40px !important;
         padding-bottom: 40px;
@@ -86,7 +42,6 @@
       }
 
     </style>
-
     <link href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -101,37 +56,29 @@
     <link rel="apple-touch-icon-precomposed" href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/ico/favicon.png">
   </head>
-<body>
-<div class="container">
-<div class="content-container"> 
-<form class="form-signin" method="post">
-<h1>Device List</h1> 
-<table> 
-    <tr> 
-        <th>ID</th> 
-        <th>Device Name</th> 
-        <th>MAC Address</th> 
-    </tr> 
 
+  <body>
 
-    <?php foreach($rows as $row): ?> 
-        <tr> 
-            <tb></td>
-            <td><?php echo $row['id']; ?></td> 
-            <td><?php echo htmlentities($row['devicename'], ENT_QUOTES, 'UTF-8'); ?></td> 
-            <td><?php echo htmlentities($row['macaddress'], ENT_QUOTES, 'UTF-8'); ?></td>
-
-        </tr> 
-    <?php endforeach; ?> 
-
-
-</table> 
-<p></p>
-<a href="add_devices.php">Add Device</a><br />
-<a href="delete_devices.php">Delete Device</a><br />
-<a href="wol.php">Main Page</a><br />
+    <div class="container">
+    	<form class="form-signin" method="post">
+        
+<center>
+        	<h3 class="form-signin-heading">
+	<h1><u>Credits</u></h1><br />
+<h4>Key Grip</h4>
+<h2>Jeremy Blum</h2>
+<h4>Animal Wrangler</h4>
+<h2>Robbie Bryan</h2>
+<h4>Stunt Coordinator</h4>
+<h2>John Gill</h2>
+<h4>Stage Hand #1</h4>
+<h2>Raymond Jones</h2>
+In all seriousness, Jeremy Blum's <u>Raspberry Pi Remote Wake-On-LAN Server</u> was the inspiration and core for Remote WOL Server.  Way to go Jeremy!  
+Robbie Bryan helped with unifying the look.  John  Gill and Raymond Jones worked to make the PHP happen.
+<p></p><br />
+No avocados were harmed in the making of this software.
+</center>
 </form>
-</div>
 </div>
 </body>
 </html>

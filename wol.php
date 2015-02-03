@@ -170,7 +170,14 @@ print_r($COMPUTER_LOCAL_MAC_ARRAY);
            
             <?php
 
-				
+				if ($COMPUTER_NAME_ARRAY[$selectedComputer] == "SELECT")
+				{
+				echo "<h5 id='wait'>Select a computer.</h5>";
+				$asleep = false;
+				$show_form = false;
+				}
+				else
+				{
 				if (!isset($_POST['submitbutton']) || (isset($_POST['submitbutton']) && !$approved_wake && !$approved_sleep))
 				{
 					echo "<h5 id='wait'>Querying Computer State. Please Wait...</h5>";
@@ -184,15 +191,18 @@ print_r($COMPUTER_LOCAL_MAC_ARRAY);
 					{
 						$asleep = true;
 						echo "<h5>" . $COMPUTER_NAME_ARRAY[$selectedComputer] . " is presently asleep.</h5>";
+						$show_form = true;
 					}
 					else
 					{
 						$asleep = false;
 						echo "<h5>" . $COMPUTER_NAME_ARRAY[$selectedComputer] . " is presently awake.</h5>";
+						$show_form = true;
 					}
 				}
+				}
 				                
-                $show_form = true;
+                
                 
                 if ($approved_wake)
                 {
@@ -296,6 +306,7 @@ print_r($COMPUTER_LOCAL_MAC_ARRAY);
 		<p><a href="memberlist.php">See Existing Users</a></p>
 		<p><a href="add_devices.php">Add New Device</a></p>
                 <p><a href="devicelist.php">See Existing Devices</a></p>
+                <p><a href="credits.php">Credits</a></p>
 		<p><a href="logout.php">Log Out</a></p>
 		</form>
     </div> <!-- /container -->
