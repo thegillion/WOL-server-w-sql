@@ -61,40 +61,8 @@ print_r($COMPUTER_LOCAL_MAC_ARRAY);
 
     <!-- Le styles -->
     <link href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/css/bootstrap.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 40px !important;
-        padding-bottom: 40px;
-        background-color: #f5f5f5;
-      }
-
-      .form-signin {
-        max-width: 600px;
-        padding: 19px 29px 29px;
-        margin: 0 auto 20px;
-        background-color: #fff;
-        border: 1px solid #e5e5e5;
-        -webkit-border-radius: 5px;
-           -moz-border-radius: 5px;
-                border-radius: 5px;
-        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-                box-shadow: 0 1px 2px rgba(0,0,0,.05);
-      }
-      .form-signin .form-signin-heading,
-      .form-signin .checkbox {
-        margin-bottom: 10px;
-      }
-      .form-signin input[type="text"],
-      .form-signin input[type="password"] {
-        font-size: 16px;
-        height: auto;
-        margin-bottom: 15px;
-        padding: 7px 9px;
-      }
-
-    </style>
     <link href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -172,7 +140,7 @@ print_r($COMPUTER_LOCAL_MAC_ARRAY);
 
 				if ($COMPUTER_NAME_ARRAY[$selectedComputer] == "SELECT")
 				{
-				echo "<h5 id='wait'>Select a computer.</h5>";
+				echo "<h4 id='wait'>Select a computer.</h4>";
 				$asleep = false;
 				$show_form = false;
 				}
@@ -220,13 +188,13 @@ print_r($COMPUTER_LOCAL_MAC_ARRAY);
 						if ($pinginfo != "")
 						{
 							$down = false;
-							echo "<span style='color:#00CC00;'><b>It's Alive!</b></span><br />";
+							echo "<span style='color:#00CC00;'><b>It's Alive!</b></span>";
 							echo "<p><a href='?computer=" . $selectedComputer . "'>Return to the Wake/Sleep Control Home</a></p>";
 							$show_form = false;
 						}
 						else
 						{
-							echo "<span style='color:#CC0000;'><b>Still Down.</b></span><br />";
+							echo "<span style='color:#CC0000;'><b>Still Down.</b></span>";
 						}
 						sleep($SLEEP_TIME);
 					}
@@ -261,14 +229,14 @@ print_r($COMPUTER_LOCAL_MAC_ARRAY);
 							if ($pinginfo == "")
 							{
 								$down = true;
-								echo "<span style='color:#00CC00;'><b>It's Asleep!</b></span><br />";
+								echo "<span style='color:#00CC00;'><b>It's Asleep!</b></span>";
 								echo "<p><a href='?computer=" . $selectedComputer . "'>Return to the Wake/Sleep Control Home</a></p>";
 								$show_form = false;
 								
 							}
 							else
 							{
-								echo "<span style='color:#CC0000;'><b>Still Awake.</b></span><br />";
+								echo "<span style='color:#CC0000;'><b>Still Awake.</b></span>";
 							}
 							sleep($SLEEP_TIME);
 						}
@@ -300,14 +268,15 @@ print_r($COMPUTER_LOCAL_MAC_ARRAY);
 			<?php
 				}
 			?>
-		<p></p>
-		<p><a href="add_users.php">Register New User</a></p>
-		<p><a href="edit_account.php">Edit Your User Account</a></p>
-		<p><a href="memberlist.php">See Existing Users</a></p>
-		<p><a href="add_devices.php">Add New Device</a></p>
-                <p><a href="devicelist.php">See Existing Devices</a></p>
-                <p><a href="credits.php">Credits</a></p>
-		<p><a href="logout.php">Log Out</a></p>
+		<ul>
+			<li><a href="add_users.php">Register New User</a></li>
+			<li><a href="edit_account.php">Edit Your User Account</a></li>
+			<li><a href="memberlist.php">See Existing Users</a></li>
+			<li><a href="add_devices.php">Add New Device</a></li>
+            <li><a href="devicelist.php">See Existing Devices</a></li>
+            <li><a href="credits.php">Credits</a></li>
+			<li><a href="logout.php">Log Out</a></li>
+	</ul>
 		</form>
     </div> <!-- /container -->
     <script src="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/js/bootstrap.min.js"></script>

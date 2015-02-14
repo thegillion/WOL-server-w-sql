@@ -233,41 +233,8 @@
 
     <!-- Le styles -->
     <link href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/css/bootstrap.css" rel="stylesheet">
-<style type="text/css">
-      body {
-        padding-top: 40px !important;
-        padding-bottom: 40px;
-        background-color: #f5f5f5;
-      }
-
-      .form-signin {
-        max-width: 600px;
-        padding: 19px 29px 29px;
-        margin: 0 auto 20px;
-        background-color: #fff;
-        border: 1px solid #e5e5e5;
-        -webkit-border-radius: 5px;
-           -moz-border-radius: 5px;
-                border-radius: 5px;
-        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-                box-shadow: 0 1px 2px rgba(0,0,0,.05);
-      }
-      .form-signin .form-signin-heading,
-      .form-signin .checkbox {
-        margin-bottom: 10px;
-      }
-      .form-signin input[type="text"],
-      .form-signin input[type="password"] {
-        font-size: 16px;
-        height: auto;
-        margin-bottom: 15px;
-        padding: 7px 9px;
-      }
-
-    </style>
     <link href="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
-    	
+    <link href="css/style.css" rel="stylesheet">	
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="<?php echo $BOOTSTRAP_LOCATION_PREFIX; ?>bootstrap/js/html5shiv.js"></script>
@@ -285,22 +252,21 @@
 <form class="form-signin" method="post">
   <h1>Add New Device</h1> 
 <form action="add_devices.php" method="post"> 
-    Device Name:<br /> 
+    <label>Device Name</label> 
     <input type="text" name="devicename" value="" /> 
-    <br /><br /> 
-    MAC Address:<br /> 
+    <label>Mac Address</label>
     <input type="text" name="macaddress" value="" /> 
-    <p>Format MAC address like a1:b2:c3:d4:e5:f6 including colons.</p>
-    <br /><br /> 
-    IP Address:<br /> 
+    <p class="input-hints">Format MAC address like a1:b2:c3:d4:e5:f6 including colons.</p>
+     
+    <label>IP Address</label>
     <input type="text" name="ipaddress" value="" /> 
-	<p>Format IP Address like 192.168.1.x including periods.</p>
-    <br /><br /> 
-    <input type="submit" value="Submit" /> 
-
-<p></p>
-<a href="devicelist.php">See Existing Devices</a><br />
-<a href="wol.php">Main Page</a><br />
+	<p class="input-hints">Format IP Address like 192.168.1.x including periods.</p>
+     
+    <input class="btn btn-large btn-primary" type="submit" value="Submit" /> 
+<ul>
+    <li><a href="devicelist.php">See Existing Devices</a></li>
+    <li><a href="wol.php">Main Page</a></li>
+</ul>
 </form>
 </div>
 </div>
