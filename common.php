@@ -1,8 +1,8 @@
 <?php 
 
     // These variables define the connection information for your MySQL database 
-    $username = "root"; 
-    $password = ""; 
+    $username = "wolserver"; 
+    $password = "wolserver"; 
     $host = "localhost"; 
     $dbname = "wolserver"; 
 
